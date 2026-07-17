@@ -1,6 +1,6 @@
 <?php
 /**
- * Admin-Menü von Vereinsmeierei Pro
+ * Verwaltung des Adminbereichs.
  *
  * @package VereinsmeiereiPro
  */
@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
 class Admin
 {
     /**
-     * Registriert das Hauptmenü.
+     * Registriert das Admin-Menü.
      */
     public function registerMenu(): void
     {
@@ -27,13 +27,39 @@ class Admin
             'dashicons-groups',
             30
         );
+
+        add_submenu_page(
+            'vereinsmeierei-pro',
+            'Dashboard',
+            'Dashboard',
+            'manage_options',
+            'vereinsmeierei-pro',
+            [$this, 'dashboard']
+        );
+
+        add_submenu_page(
+            'vereinsmeierei-pro',
+            'Mitglieder',
+            'Mitglieder',
+            'manage_options',
+            'vereinsmeierei-pro-members',
+            [$this, 'members']
+        );
     }
 
     /**
-     * Zeigt das Dashboard an.
+     * Dashboard anzeigen.
      */
     public function dashboard(): void
     {
         require_once VMP_PLUGIN_PATH . 'app/Views/dashboard.php';
+    }
+
+    /**
+     * Mitgliederseite anzeigen.
+     */
+    public function members(): void
+    {
+        require_once VMP_PLUGIN_PATH . 'app/Views/members.php';
     }
 }
