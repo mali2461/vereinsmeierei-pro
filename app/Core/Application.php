@@ -7,20 +7,20 @@
  * @package VereinsmeiereiPro
  */
 
+declare(strict_types=1);
+
 namespace VereinsmeiereiPro\Core;
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-class Application {
-
+class Application
+{
     /**
      * Startet das Plugin.
-     *
-     * @return void
      */
-    public function run(): void {
-
-        // Hier werden später alle Module gestartet.
-
+    public function run(): void
+    {
+        $loader = new Loader();
+        $loader->register();
     }
 }
