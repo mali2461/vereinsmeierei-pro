@@ -30,13 +30,10 @@ class Admin
     }
 
     /**
-     * Dashboard-Ausgabe.
+     * Zeigt das Dashboard an.
      */
     public function dashboard(): void
     {
-        echo '<div class="wrap">';
-        echo '<h1>Vereinsmeierei Pro</h1>';
-        echo '<p>Willkommen im Maschinenraum.</p>';
-        echo '</div>';
+        require_once VMP_PLUGIN_PATH . 'app/Views/dashboard.php';
     }
 }
