@@ -1,34 +1,26 @@
 <?php
+/**
+ * Vereinsmeierei Pro
+ *
+ * Hauptklasse des Plugins.
+ *
+ * @package VereinsmeiereiPro
+ */
 
-declare(strict_types=1);
+namespace VereinsmeiereiPro\Core;
 
-namespace Vereinsmeierei\Core;
+defined( 'ABSPATH' ) || exit;
 
-class Application
-{
-    public function boot(): void
-    {
-        add_action('admin_menu', [$this, 'registerAdminMenu']);
-    }
+class Application {
 
-    public function registerAdminMenu(): void
-    {
-        add_menu_page(
-            __('Vereinsmeierei Pro', 'vereinsmeierei-pro'),
-            __('Vereinsmeierei Pro', 'vereinsmeierei-pro'),
-            'manage_options',
-            'vereinsmeierei-pro',
-            [$this, 'renderDashboard'],
-            'dashicons-groups',
-            30
-        );
-    }
+    /**
+     * Startet das Plugin.
+     *
+     * @return void
+     */
+    public function run(): void {
 
-    public function renderDashboard(): void
-    {
-        echo '<div class="wrap">';
-        echo '<h1>' . esc_html__('Vereinsmeierei Pro', 'vereinsmeierei-pro') . '</h1>';
-        echo '<p>' . esc_html__('Willkommen zu Build 0001.', 'vereinsmeierei-pro') . '</p>';
-        echo '</div>';
+        // Hier werden später alle Module gestartet.
+
     }
 }

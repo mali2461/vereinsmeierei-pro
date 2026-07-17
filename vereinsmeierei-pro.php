@@ -11,19 +11,8 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       vereinsmeierei-pro
  * Domain Path:       /languages
- *
- * ---------------------------------------------------------
- * Vereinsmeierei Pro
- * ---------------------------------------------------------
- *
- * Software muss den Menschen dienen – nicht umgekehrt.
- *
- * Willkommen im Maschinenraum.
- *
- * Es gibt nichts Gutes, außer: Man tut es.
- *
- * ---------------------------------------------------------
  */
+
 declare(strict_types=1);
 
 if (! defined('ABSPATH')) {
@@ -35,8 +24,9 @@ define('VMP_PLUGIN_FILE', __FILE__);
 define('VMP_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('VMP_PLUGIN_URL', plugin_dir_url(__FILE__));
 
-require_once VMP_PLUGIN_PATH . 'app/Core/Application.php';
+require_once VMP_PLUGIN_PATH . 'app/Core/Autoloader.php';
 
-$app = new \Vereinsmeierei\Core\Application();
-$app->boot();
+\VereinsmeiereiPro\Core\Autoloader::register();
 
+$app = new \VereinsmeiereiPro\Core\Application();
+$app->run();
