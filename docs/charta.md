@@ -24,7 +24,7 @@ Jede Entscheidung, die wir treffen, beginnt mit einer einfachen Frage:
 
 **Hilft sie den Menschen im Verein?**
 
-Wenn die Antwort Ja lautet, gehen wir den nächsten Schritt.
+Wenn die Antwort „Ja“ lautet, gehen wir den nächsten Schritt.
 
 ---
 
@@ -36,7 +36,7 @@ Sie schaffen Gemeinschaft, vermitteln Werte, fördern Verantwortung und bringen 
 
 Sie leben vom Engagement ihrer Mitglieder.
 
-Jeder Verein ist stark durch seine Mitwirkenden.
+**Jeder Verein ist stark durch seine Mitwirkenden.**
 
 ---
 
@@ -53,6 +53,22 @@ Mit eigenen Stärken.
 Deshalb betrachten wir Mitglieder niemals nur als Datensätze.
 
 Wir entwickeln Software für Menschen.
+
+---
+
+## Respekt vor gewachsenen Strukturen
+
+Jeder Verein hat seine eigene Geschichte.
+
+Jeder Verein entwickelt im Laufe der Jahre eigene Traditionen, Abläufe und Organisationsformen. Diese gewachsenen Strukturen sind Ausdruck des Vereinslebens und verdienen unseren Respekt.
+
+Vereinsmeierei Pro verfolgt nicht das Ziel, Vereine umzubauen oder ihnen eine bestimmte Arbeitsweise vorzuschreiben.
+
+Unser Ziel ist es, diese Strukturen digital abzubilden, organisatorische Abläufe zu vereinfachen und den Menschen die tägliche Vereinsarbeit zu erleichtern.
+
+**Wir entwickeln keine Vereine für unsere Software.**
+
+**Wir entwickeln Software für Vereine.**
 
 ---
 
@@ -77,6 +93,8 @@ Deshalb soll sich Vereinsmeierei Pro an die Bedürfnisse des Vereins anpassen.
 Nicht umgekehrt.
 
 Wir entwickeln eine Plattform, die Vereine unterstützt, ohne sie in starre Strukturen zu zwingen.
+
+**Die Software passt sich dem Verein an – nicht der Verein der Software.**
 
 ---
 
