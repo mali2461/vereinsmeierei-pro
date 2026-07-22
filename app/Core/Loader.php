@@ -1,8 +1,8 @@
 <?php
 /**
- * Vereinsmeierei Pro
+ * Loader
  *
- * Verwaltet alle WordPress-Hooks.
+ * Registriert alle WordPress-Hooks.
  *
  * @package VereinsmeiereiPro
  */
@@ -18,12 +18,15 @@ defined('ABSPATH') || exit;
 class Loader
 {
     /**
-     * Registriert alle WordPress-Hooks.
+     * Registriert alle Hooks.
      */
     public function register(): void
     {
         $admin = new Admin();
 
-        add_action('admin_menu', [$admin, 'registerMenu']);
+        add_action(
+            'admin_menu',
+            [$admin, 'registerMenu']
+        );
     }
 }

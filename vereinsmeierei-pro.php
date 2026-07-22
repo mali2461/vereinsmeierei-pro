@@ -15,7 +15,7 @@
 
 declare(strict_types=1);
 
-if (! defined('ABSPATH')) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
@@ -28,5 +28,18 @@ require_once VMP_PLUGIN_PATH . 'app/Core/Autoloader.php';
 
 \VereinsmeiereiPro\Core\Autoloader::register();
 
+/**
+ * Wird beim Aktivieren des Plugins ausgeführt.
+ */
+function vmp_activate(): void
+{
+    \VereinsmeiereiPro\Database\MemberTable::create();
+}
+
+register_activation_hook(__FILE__, 'vmp_activate');
+
+/**
+ * Plugin starten.
+ */
 $app = new \VereinsmeiereiPro\Core\Application();
 $app->run();

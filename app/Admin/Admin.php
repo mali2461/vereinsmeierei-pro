@@ -20,7 +20,7 @@ class Admin
     {
         add_menu_page(
             'Vereinsmeierei Pro',
-            'Vereinsmeierei Pro',
+            '🧡 Opas Vereinsmeierei',
             'manage_options',
             'vereinsmeierei-pro',
             [$this, 'dashboard'],
@@ -45,6 +45,15 @@ class Admin
             'vereinsmeierei-pro-members',
             [$this, 'members']
         );
+
+        add_submenu_page(
+            'vereinsmeierei-pro',
+            'Neues Mitglied',
+            'Neues Mitglied',
+            'manage_options',
+            'vereinsmeierei-pro-member-new',
+            [$this, 'memberNew']
+        );
     }
 
     /**
@@ -60,6 +69,14 @@ class Admin
      */
     public function members(): void
     {
-        require_once VMP_PLUGIN_PATH . 'app/Views/members.php';
+        require_once VMP_PLUGIN_PATH . 'app/Views/members/members.php';
+    }
+
+    /**
+     * Formular für ein neues Mitglied anzeigen.
+     */
+    public function memberNew(): void
+    {
+        require_once VMP_PLUGIN_PATH . 'app/Views/members/member-new.php';
     }
 }
