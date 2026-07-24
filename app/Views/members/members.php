@@ -7,12 +7,12 @@
 
 declare(strict_types=1);
 
-use VereinsmeiereiPro\Repositories\MemberRepository;
+use VereinsmeiereiPro\Services\MemberService;
 
 defined('ABSPATH') || exit;
 
-$repository = new MemberRepository();
-$members = $repository->findAll();
+$service = new MemberService();
+$members = $service->findAll();
 ?>
 
 <div class="wrap">
@@ -42,6 +42,7 @@ $members = $repository->findAll();
                     <th>Nachname</th>
                     <th>E-Mail</th>
                     <th>Status</th>
+                    <th>Aktionen</th>
                 </tr>
             </thead>
 
@@ -55,6 +56,14 @@ $members = $repository->findAll();
                     <td><?php echo esc_html($member['lastname']); ?></td>
                     <td><?php echo esc_html($member['email']); ?></td>
                     <td><?php echo esc_html($member['status']); ?></td>
+                    <td>
+                        <a
+                            href="?page=vereinsmeierei-pro-member-new&id=<?php echo (int) $member['id']; ?>"
+                            class="button button-small"
+                        >
+                            Bearbeiten
+                        </a>
+                    </td>
                 </tr>
 
             <?php endforeach; ?>

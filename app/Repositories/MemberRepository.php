@@ -69,4 +69,54 @@ class MemberRepository
             ARRAY_A
         );
     }
+
+    /**
+     * Liefert ein Mitglied anhand der ID.
+     */
+    public function findById(int $id): ?array
+    {
+        global $wpdb;
+
+        $member = $wpdb->get_row(
+            $wpdb->prepare(
+                "SELECT * FROM {$this->table} WHERE id = %d",
+                $id
+            ),
+            ARRAY_A
+        );
+
+        return $member ?: null;
+    }
+
+    /**
+     * Aktualisiert ein bestehendes Mitglied.
+     */
+    public function update(int $id, Member $member): bool
+    {
+        global $wpdb;
+
+        $result = $wpdb->update(
+            $this->table,
+            [
+                'member_number' => $member->member_number,
+                'firstname'     => $member->firstname,
+                'lastname'      => $member->lastname,
+                'email'         => $member->email,
+                'phone'         => $member->phone,
+                'mobile'        => $member->mobile,
+                'street'        => $member->street,
+                'zip'           => $member->zip,
+                'city'          => $member->city,
+                'birthday'      => $member->birthday,
+                'joined_at'     => $member->joined_at,
+                'status'        => $member->status,
+                'updated_at'    => current_time('mysql'),
+            ],
+            [
+                'id' => $id,
+            ]
+        );
+
+        return $result !== false;
+    }
 }
