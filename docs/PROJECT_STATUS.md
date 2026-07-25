@@ -1,7 +1,12 @@
 # Vereinsmeierei Pro
-## Projektstatus
 
-Stand: 20.07.2026
+# Projektstatus
+
+Version: Entwicklung
+
+Aktueller Build: 0002
+
+Stand: 25.07.2026
 
 ---
 
@@ -45,29 +50,26 @@ Views / Services / Repository / Models
 
 # Aktuelle Ordnerstruktur
 
+```
 app/
 
 Admin/
-
 Core/
-
 Database/
-
 Helpers/
-
 Models/
-
 Modules/
-
 Services/
-
 Views/
 
 docs/
+```
 
 ---
 
-# Bereits umgesetzt
+# Fertiggestellt
+
+✔ Grundstruktur
 
 ✔ Autoloader
 
@@ -79,94 +81,138 @@ docs/
 
 ✔ Dashboard
 
-✔ Mitgliederseite
+✔ Mitgliederübersicht
 
 ✔ Formular "Neues Mitglied"
 
 ✔ Member Model
 
-✔ MemberTable
+✔ Datenbanktabelle MemberTable
 
 ✔ Members-Modul
 
 ---
 
-# Nächste Entwicklungsschritte
+# In Arbeit
+
+▶ Mitgliederverwaltung
+
+---
+
+# Geplante Features
 
 ## Mitglieder
 
-- Repository erstellen
-- Service erstellen
-- Controller erstellen
-- Datenbankanbindung
-- Mitglied speichern
-- Mitglieder bearbeiten
-- Mitglieder löschen
-- Suche
-- Filter
-- Pagination
+☐ Repository
+
+☐ Service
+
+☐ Controller
+
+☐ Speichern
+
+☐ Bearbeiten
+
+☐ Löschen
+
+☐ Suche
+
+☐ Filter
+
+☐ Pagination
 
 ---
 
 ## Weitere Module
 
-- Beiträge
-- Veranstaltungen
-- Dokumente
-- Inventar
-- Kommunikation
-- Finanzen
+☐ Beiträge
+
+☐ Veranstaltungen
+
+☐ Dokumente
+
+☐ Inventar
+
+☐ Kommunikation
+
+☐ Finanzen
+
+---
+
+# Build-Historie
+
+## Build 0001
+
+- Projektstruktur
+- Autoloader
+- Application
+- Loader
+- Dashboard
+
+Status: ✔ Abgeschlossen
+
+---
+
+## Build 0002
+
+- Mitglieder-Menü
+- Mitgliederübersicht
+- Formular "Neues Mitglied"
+- Member Model
+- MemberTable
+
+Status: ✔ Abgeschlossen
+
+---
+
+## Nächster Build
+
+Build 0003
+
+Ziel:
+
+- Vollständige Mitgliederverwaltung beginnen.
+
+Geplante Funktionen:
+
+- Repository
+- Service
+- Controller
+- Datenbankzugriff
+
+Status:
+
+▶ Geplant
 
 ---
 
 # Entwicklungsregeln
 
+- Eine Änderung pro Build.
+- Nach jedem Build testen.
+- Danach Git-Commit.
+- Vollständige Dateien austauschen.
 - Keine Geschäftslogik in Views.
-
-- Admin enthält nur WordPress-Menüs.
-
-- Module enthalten ihre eigene Logik.
-
-- Kleine testbare Schritte.
-
-- Nach jedem Schritt testen.
-
-- Änderungen möglichst als vollständige Dateien austauschen.
+- Module bleiben unabhängig.
+- Dokumentation immer aktuell halten.
 
 ---
 
-# Versionen
+# Langfristige Roadmap
 
-## Build 0001
+Version 0.5
 
-Grundstruktur erstellt.
+- Mitgliederverwaltung vollständig
 
-Adminbereich funktionsfähig.
+Version 0.8
 
-Erste Mitgliederseiten vorhanden.
+- Beiträge
+- Veranstaltungen
+- Dokumente
 
----
+Version 1.0
 
-# Aktuelles Ziel
-
-Eine vollständige Mitgliederverwaltung entwickeln.
-
-Erstes Ziel:
-
-Mitglied anlegen
-
-↓
-
-In Datenbank speichern
-
-↓
-
-Mitgliederliste anzeigen
-
-↓
-
-Bearbeiten
-
-↓
-
-Löschen
+- Inventar
+- Kommunikation
+- Finanzen
+- Erste Release-Version
