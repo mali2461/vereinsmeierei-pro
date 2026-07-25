@@ -57,4 +57,12 @@ class MemberService
     {
         return $this->repository->update($id, $member);
     }
+
+    /**
+     * Mitglied löschen.
+     */
+    public function delete(int $id): bool
+    {
+        return $this->repository->delete($id);
+    }
 }

@@ -57,12 +57,22 @@ $members = $service->findAll();
                     <td><?php echo esc_html($member['email']); ?></td>
                     <td><?php echo esc_html($member['status']); ?></td>
                     <td>
+
                         <a
                             href="?page=vereinsmeierei-pro-member-new&id=<?php echo (int) $member['id']; ?>"
                             class="button button-small"
                         >
                             Bearbeiten
                         </a>
+
+                        <a
+                            href="?page=vereinsmeierei-pro-member-new&delete=<?php echo (int) $member['id']; ?>"
+                            class="button button-small button-link-delete"
+                            onclick="return confirm('Mitglied wirklich löschen?');"
+                        >
+                            Löschen
+                        </a>
+
                     </td>
                 </tr>
 

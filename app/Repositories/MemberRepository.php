@@ -119,4 +119,24 @@ class MemberRepository
 
         return $result !== false;
     }
+
+    /**
+     * Löscht ein Mitglied anhand der ID.
+     */
+    public function delete(int $id): bool
+    {
+        global $wpdb;
+
+        $result = $wpdb->delete(
+            $this->table,
+            [
+                'id' => $id,
+            ],
+            [
+                '%d',
+            ]
+        );
+
+        return $result !== false;
+    }
 }
